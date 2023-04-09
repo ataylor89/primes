@@ -28,7 +28,7 @@ int main(int argc, char **argv) {
     char* numbers = sieve(size);
     for (int i = 2; count < n; i++) {
         if (i == size) {
-            size *= 2;
+            size *= 10;
             numbers = sieve(size);
         }
         if (numbers[i] == 'P') {
