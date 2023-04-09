@@ -12,14 +12,14 @@ The binary file can be run with the command
 
     ./primes <number_of_primes>
 
-For example, we can get the first 10 primes with the command
+For example, this gets the first 10 primes
 
     ./primes 10
 
-We can get the first 100 primes with the command
+This gets the first 100 primes
 
     ./primes 100
 
-We can get the first 1000 primes with the command
+This gets the first 1000 primes
 
     ./primes 1000
