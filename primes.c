@@ -24,8 +24,13 @@ int main(int argc, char **argv) {
     }
     int n = atoi(argv[1]);
     int count = 0;
-    char* numbers = sieve(1000);
-    for (int i = 2; i < 1000 && count < n; i++) {
+    int size = 1000;
+    char* numbers = sieve(size);
+    for (int i = 2; count < n; i++) {
+        if (i == size) {
+            size *= 2;
+            numbers = sieve(size);
+        }
         if (numbers[i] == 'P') {
             count++;
             if (count < n) {
