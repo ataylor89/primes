@@ -7,14 +7,14 @@ table = []
 
 def generate(n):
     size = 10 * n
-    s = sieve(n, size)
+    s = sieve(size)
     while s.count('P') < n:
         size *= 10
-        s = sieve(n, size)
+        s = sieve(size)
     table.clear()
     table.extend([i for i, j in enumerate(s) if j == 'P'][0:n])
 
-def sieve(n, size):
+def sieve(size):
     arr = ['P'] * size
     arr[0] = 'N'
     arr[1] = 'N'
