@@ -18,6 +18,18 @@ The sieve (array) has to be large enough to accomodate the desired number of pri
 
 I hope this explains the algorithm. I had to play around with it for a while until I fully understood it. But after you understand it, you know a valuable algorithm that has been in use for over two thousand years.
 
+## What is a sieve?
+
+I want to quickly answer this vocabulary question. I had the same question myself in the past.
+
+I think that "sieve" is a synonym for "filter". A filter is a device that separates an input stream into two categories: what gets filtered in and what gets filtered out.
+
+The Sieve of Eratosthenes is a filter that separates primes from non-primes.
+
+There are many other examples of sieves (filters). A kitchen colander is a type of sieve.
+
+I hope this answers the vocabulary question.
+
 ## primes.c
 
 The file primes.c can be compiled (and linked) with the command:
