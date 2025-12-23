@@ -28,7 +28,9 @@ Then, you can run the executable, with the command:
 
     ./primes <number_of_primes>
 
-The string \<number_of_primes\> denotes the argument that you pass it. The argument has to be a positive integer. For example,
+The string \<number_of_primes\> denotes the argument that you pass it. The argument has to be a positive integer.
+
+For example,
 
     # This gets the first 5 primes
     ./primes 5
