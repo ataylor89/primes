@@ -12,8 +12,8 @@ struct Sieve sieve(int size) {
     struct Sieve s;
     s.table = malloc(sizeof(char)*size);
     memset(s.table, 'P', size);
-    s.table[0] = '0';
-    s.table[1] = '1';
+    s.table[0] = 'N';
+    s.table[1] = 'N';
     s.size = size;
     s.num_primes = size - 2;
     for (int i = 2; i < size; i++) {
