@@ -98,8 +98,8 @@ The files primetable.py and primes.c are very similar, because they both use the
 
 The two main differences between primetable.py and primes.c are the following:
 
-    1. The file primetable.py has a more advanced command-line interface
-    2. The file primetable.py persists the list of primes to a file, which effectively caches the result for future reference
+1. The file primetable.py has a more advanced command-line interface
+2. The file primetable.py persists the list of primes to a file, which effectively caches the result for future reference
 
 It takes a long time to generate a hundred thousand primes (or a million... or ten million). For this reason, caching can be very useful. The file primetable.py caches each result in a local database, so that it only needs to use the SoE algorithm when the cache is insufficient.
 
