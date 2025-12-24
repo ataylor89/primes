@@ -85,14 +85,17 @@ The file primetable.py can be used in many possible ways. Here are some examples
     # Generate a list of primes, and save to file, without printing
     python primetable.py -n 10
 
-    # Generate a list of primes, and save to file; print the last prime in the list
-    python primetable.py -n 10 --show
+    # Generate a list of primes, save to file, and print the nth prime
+    python primetable.py -n 10 --shownth
 
-    # Generate a list of primes, and save to file; print the full list of primes
+    # Generate a list of primes, save to file, and print the first n primes
     python primetable.py -n 10 --showlist
 
     # Generate a list of primes, save to file, and write a string representation to file
     python primetable.py -n 10 -o primes.txt
+
+    # Generate a list of primes, save to file, and clock the time it takes to generate the first n primes
+    python primetable.py -n 100 --showlist --time
 
 The files primetable.py and primes.c are very similar, because they both use the Sieve of Eratosthenes to generate a list of primes.
 
