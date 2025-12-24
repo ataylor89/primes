@@ -67,3 +67,50 @@ I actually created a symbolic link to the executable in my ~/bin folder.
     # Now, I can run the program from any directory, since ~/bin is included in my PATH variable
     primes 10
     2, 3, 5, 7, 11, 13, 17, 19, 23, 29
+
+## primetable.py
+
+The file primetable.py uses the argparse library to parse command-line arguments and options.
+
+Vocabulary happens to be one of my interests. What is the definition of "parser"?
+
+A parser breaks a word, sentence, or file into its parts. It comes from the Latin word "pars, partis" which means "part" or "parts".
+
+More specifically, a parser accepts an input, deciphers the input, and then produces a parse tree (or abstract syntax tree) that makes the input easier to work with and understand.
+
+You can see how the argparse library makes it easier to work with, and understand, command-line arguments and options.
+
+The file primetable.py can be used in many possible ways. Here are some examples:
+
+    # Generate a list of primes, and save to file, without printing
+    python primetable.py -n 10
+
+    # Generate a list of primes, and save to file; print the last prime in the list
+    python primetable.py -n 10 --show
+
+    # Generate a list of primes, and save to file; print the full list of primes
+    python primetable.py -n 10 --showlist
+
+    # Generate a list of primes, save to file, and write a string representation to file
+    python primetable.py -n 10 -o primes.txt
+
+The files primetable.py and primes.c are very similar, because they both use the Sieve of Eratosthenes to generate a list of primes.
+
+The two main differences between primetable.py and primes.c are the following:
+
+    1. The file primetable.py has a more advanced command-line interface
+    2. The file primetable.py persists the list of primes to a file, which effectively caches the result for future reference
+
+It takes a long time to generate a hundred thousand primes (or a million... or ten million). For this reason, caching can be very useful. The file primetable.py caches each result in a local database, so that it only needs to use the SoE algorithm when the cache is insufficient.
+
+I created a symbolic link to primetable.py in my bin folder, just like before.
+
+    cd ~/bin
+    ln -s ~/Github/primes/primetable.py primetable
+    chmod +x ~/Github/primes/primetable.py
+
+This way, I can run the program "primetable" from any directory.
+
+    cd ~
+    primetable -n 10 --showlist
+    [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
