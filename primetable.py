@@ -63,25 +63,27 @@ def main():
         generate(n)
         te = time.time() - st
         save()
-    if args.shownth:
-        nthprime = table[n-1]
-        if args.outputfile:
-            with open(args.outputfile, 'w') as file:
-                file.write(str(nthprime))
-        else:
-            print(nthprime)
-    elif args.showlist:
-        primes = table[0:n]
-        if args.outputfile:
-            with open(args.outputfile, 'w') as file:
-                file.write(str(primes))
-        else:
-            print(primes)
-    if args.time:
-        if te > 0:
-            print('Created a prime table with %d primes in %s seconds' %(n, te))
-        else:
-            print('Used a cached result')
+    if args.outputfile:
+        with open(args.outputfile, 'w') as file:
+            if args.shownth:
+                file.write(str(table[n-1]) + '\n')
+            elif args.showlist:
+                file.write(str(table[0:n]) + '\n')
+            if args.time:
+                if te > 0:
+                    file.write(f'Created a prime table with {n} primes in {te} seconds\n')
+                else:
+                    file.write('Used a cached result\n')
+    else:
+        if args.shownth:
+            print(table[n-1])
+        elif args.showlist:
+            print(table[0:n])
+        if args.time:
+            if te > 0:
+                print('Created a prime table with %d primes in %s seconds' %(n, te))
+            else:
+                print('Used a cached result')
 
 if __name__ == '__main__':
     main()
