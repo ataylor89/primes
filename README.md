@@ -91,8 +91,8 @@ The file primetable.py can be used in many possible ways. Here are some examples
     # Generate a list of primes, save to file, and print the first n primes
     python primetable.py -n 10 --showlist
 
-    # Generate a list of primes, save to file, and write a string representation to file
-    python primetable.py -n 10 -o primes.txt
+    # Generate a list of primes, save to file, and write the first n primes to file
+    python primetable.py -n 10 --showlist -o primes.txt
 
     # Generate a list of primes, save to file, and clock the time it takes to generate the first n primes
     python primetable.py -n 100 --showlist --time
