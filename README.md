@@ -213,7 +213,7 @@ If the primetable.pickle file is not sufficient, or it doesn't exist, then I use
 
 The prime factorization algorithm can be described in the following way:
 
-1. Let n be the number we are going to factor (n has to be a positive integer)
+1. Let n be the number we are going to factor (n has to be a positive integer greater than 1)
 2. Let primes be the list of possible prime factors of n (i.e., every prime number between 2 and n, inclusive)
 3. Let primefac be a hashmap that will eventually hold each prime factor and its frequency (degree)
 4. For each prime number p in primes:
