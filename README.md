@@ -217,11 +217,11 @@ The prime factorization algorithm can be described in the following way:
 2. Let primes be the list of possible prime factors of n (i.e., every prime number between 2 and n, inclusive)
 3. Let primefac be a hashmap that will eventually hold each prime factor and its frequency (degree)
 4. For each prime number p in primes:
-    4.1. if n is divisible by p:
-        primefac[p] = 0
-    4.2. while n is divisible by p:
-        4.2.1. n = n / p
-        4.2.2. primefac[p] += 1
+    1. if n is divisible by p:
+        1. primefac[p] = 0
+    2. while n is divisible by p:
+        1. n = n / p
+        2. primefac[p] += 1
 5. The prime factorization of n is now stored in the primefac hashmap, and it can be printed to standard output
 
 At the time of writing, the factor.py file has one positional argument (n) and two optional arguments (-t and -v).
