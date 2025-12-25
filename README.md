@@ -204,3 +204,117 @@ I actually looked up the answer to question #2 today.
 These are some really interesting questions in number theory. I thought that I would write them down.
 
 Both of these questions teach us about the importance of mathematical proof. Each question has an answer, a correct answer. Each question has an answer that can be verified by mathematical proof.
+
+## factor.py
+
+I wanted the file factor.py to be efficient, so I use the list of primes stored in primetable.pickle if it is sufficient.
+
+If the primetable.pickle file is not sufficient, or it doesn't exist, then I use the Sieve of Eratosthenes algorithm to generate a list of every possible prime factor.
+
+The prime factorization algorithm can be described in the following way:
+
+1. Let n be the number we are going to factor (n has to be a positive integer)
+2. Let primes be the list of possible prime factors of n (i.e., every prime number between 2 and n, inclusive)
+3. Let primefac be a hashmap that will eventually hold each prime factor and its frequency (degree)
+4. For each prime number p in primes:
+    4.1. if n is divisible by p:
+        primefac[p] = 0
+    4.2. while n is divisible by p:
+        4.2.1. n = n / p
+        4.2.2. primefac[p] += 1
+5. The prime factorization of n is now stored in the primefac hashmap, and it can be printed to standard output
+
+At the time of writing, the factor.py file has one positional argument (n) and two optional arguments (-t and -v).
+
+It can be invoked in the following ways:
+
+    python factor.py 100
+    {2: 2}, {5: 2}
+
+    python factor.py 100 -t
+    {2: 2, 5: 2}
+    Factored 100 in 0.02572798728942871 seconds
+
+    python factor.py 100 -t -v
+    {2: 2, 5: 2}
+    Factored 100 in 0.026175975799560547 seconds
+    The prime numbers were loaded from file
+
+In the last example, the prime numbers were loaded from file, because the primetable.pickle file exists, and it's sufficient.
+
+Unlike primetable.py, the factor.py file does not save the list of primes to file. (I don't want a large file to unexpectedly show up on the hard drive and take up disk space.) But it does load the primetable.pickle file when it exists. (I want the program to be efficient.)
+
+Now, I have used the word "algorithm" a number of times in this document.
+
+What is an algorithm?
+
+My family taught me that an algorithm is a list of instructions. We were able to describe the prime factorization method, above, as a list of instructions. Further up in this document, we were able to describe the Sieve of Eratosthenes algorithm, a little less formally, by giving the relevant instructions in two or three paragraphs of text.
+
+We have covered quite a bit of vocabulary in this document. Let's review.
+
+    1. An algorithm is a list of instructions.
+    2. A parser breaks a word, sentence, or file into its parts.
+        - A parser reads an input, deciphers the input, and produces a parse tree, which makes the input easier to work with.
+        - The built-in argparse library parses command-line arguments and options, and makes them easier to work with.
+    3. A sieve is a filter.
+        - A filter is a device that separates an input stream into two categories: what gets filtered in and what gets filtered out.
+        - The Sieve of Eratosthenes separates primes from non-primes, and so it acts as a sieve/filter.
+
+Honestly, I really enjoy mathematical programming, as well as computational science and computational mathematics.
+
+With an education in advanced arithmetic, it's possible to understand the RSA cryptography algorithm.
+
+Granted, that's not enough -- you also have to spend a lot of time studying the algorithm and making sense of it. But the algorithm makes use of modular arithmetic, byte arithmetic, and bit arithmetic, so knowing these subjects helps you understand the algorithm.
+
+This repository teaches us many valuable algorithms, including, the Sieve of Eratosthenes algorithm and the prime factorization algorithm. We use both of these algorithms in the factor.py file.
+
+In addition, this repository teaches us a lot about number theory.
+
+What is number theory, exactly? In my opinion, number theory is the study of numbers.
+
+Number theory is interesting for its own sake. We use numbers everywhere: in science, technology, engineering, mathematics, medicine, law, government, music, art, literature, and other fields. It is really useful to know more about numbers, since we use them so much.
+
+Number theory also has many applications to cryptography. Prime numbers, for example, are the basis of the RSA encryption algorithm. Prime numbers have useful properties in modular arithmetic, and we use these properties in the RSA encryption algorithm.
+
+That is one application of number theory... one application of prime numbers. But I'm sure there are many more.
+
+This repository is educational in some other regards. It teaches us about the argparse library, a built-in Python library. It also teaches us about the pickle library, and how it can be used to serialize an object to file. The pickle library is also built-in.
+
+I like how the repository contrasts C code with Python code. I am very fond of Java, Python, C, C++, and assembly. I use these languages very often. I also use web languages like HTML, JavaScript, and CSS.
+
+You can actually compare language features across different languages. Python has a built-in argparse library, which is very useful. But I think that C, C++, and Java are missing a built-in command-line parsing library.
+
+Python and Java have built-in GUI libraries, namely tkinter and Swing. But C and C++ are missing built-in GUI libraries.
+
+If you want to use a command-line argument parsing library in Java, C, or C++, you have to download it (at least, in the present). If you want to use a graphical toolkit in C or C++, you have to download it (GTK and gtkmm are two of my favorite options).
+
+You can see that the Python standard library is replete with features (command-line argument parsing, graphical toolkits, etc). The Java standard library is also flush with features (Swing is a very popular GUI framework).
+
+I think it's time to wrap this document up. Today is Thursday, December 25, 2025. It's Christmas Day.
+
+I would like to relax in the evening and watch a TV show or movie (or both).
+
+I watched a couple episodes of The Legend of Korra yesterday, on Christmas Eve. I might do that again, tonight.
+
+I'm a big fan of animated TV shows (also called anime). I like Pokemon, Yugioh, Avatar: The Last Airbender, The Legend of Korra, Voltron, Star Wars: Clone Wars, and many other animated shows.
+
+I also watch some live-action movies and TV shows (like Star Wars episodes I-IX).
+
+One of my favorite movies is White Fang, and that's a live-action movie.
+
+So... it's time to wrap things up.
+
+It's Christmas Day. I just finished cooking some food and I have a meal waiting for me.
+
+I have some projects lined up that I want to work on... projects in Java, Python, and C++.
+
+I'm excited to work on these projects.
+
+I wanted to write a fun, instructive readme for this repository, because there's a lot to say about prime numbers, number theory, and the Sieve of Eratosthenes algorithm.
+
+I wish everyone a Merry Christmas. (It's Christmas, so I thought I would say that.)
+
+Also, a Happy New Year.
+
+Thanks for reading,  
+Andrew
