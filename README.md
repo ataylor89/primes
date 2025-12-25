@@ -82,20 +82,20 @@ You can see how the argparse library makes it easier to work with, and understan
 
 The file primetable.py can be used in many possible ways. Here are some examples:
 
-    # Generate a list of primes, and save to file, without printing
-    python primetable.py -n 10
+    # Generate a list of the first 10 primes, and store the result, without printing
+    python primetable.py 10
 
-    # Generate a list of primes, save to file, and print the nth prime
-    python primetable.py -n 10 --shownth
+    # Generate a list of the first 10 primes, and print the 10th prime
+    python primetable.py 10 --shownth
 
-    # Generate a list of primes, save to file, and print the first n primes
-    python primetable.py -n 10 --showlist
+    # Generate a list of the first 10 primes, and print the list
+    python primetable.py 10 --showlist
 
-    # Generate a list of primes, save to file, and write the first n primes to file
-    python primetable.py -n 10 --showlist -o primes.txt
+    # Generate a list of the first 10 primes, and write the list to file
+    python primetable.py 10 --showlist -o primes.txt
 
-    # Generate a list of primes, save to file, and clock the time it takes to generate the first n primes
-    python primetable.py -n 100 --showlist --time
+    # Generate a list of the first 100 primes, store the result, print the list, and clock the time it takes
+    python primetable.py 100 --showlist --time
 
 The files primetable.py and primes.c are very similar, because they both use the Sieve of Eratosthenes to generate a list of primes.
 
@@ -122,7 +122,7 @@ This way, I can run the program "primetable" from any directory.
 
 The file primecheck.py checks whether a number is prime.
 
-It accepts an integer as a positional argument. (The file primetable.py uses options, whereas primecheck.py uses a positional argument.)
+It accepts an integer as a positional argument.
 
 If the argument is less than 2, then the program indicates that it is neither prime nor composite.
 
