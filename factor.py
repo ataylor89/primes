@@ -49,11 +49,11 @@ def load(path = default_cache_path):
 
 def main():
     parser = argparse.ArgumentParser(prog='factor.py', description='Factor a number')
-    parser.add_argument('input', type=int)
+    parser.add_argument('n', type=int, help='The number to factor')
     parser.add_argument('-t', '--time', action='store_true')
     parser.add_argument('-v', '--verbose', action='store_true')
     args = parser.parse_args()
-    n = args.input
+    n = args.n
     if n < 2:
         print('The input has to be a positive integer greater than 1')
         return
