@@ -231,7 +231,7 @@ At the time of writing, the factor.py file has one positional argument (n) and t
 It can be invoked in the following ways:
 
     python factor.py 100
-    {2: 2}, {5: 2}
+    {2: 2, 5: 2}
 
     python factor.py 100 -t
     {2: 2, 5: 2}
