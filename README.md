@@ -117,3 +117,75 @@ This way, I can run the program "primetable" from any directory.
     cd ~
     primetable -n 10 --showlist
     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+
+## primecheck.py
+
+The file primecheck.py checks whether a number is prime.
+
+It accepts an integer as a positional argument. (The file primetable.py uses options, whereas primecheck.py uses a positional argument.)
+
+If the argument is less than 2, then the program indicates that it is neither prime nor composite.
+
+If the argument is greater than 2, then the program indicates whether it is prime or composite.
+
+Here is a fun fact. A prime number has exactly two factors. For example, 2 has the factors 2 and 1. 5 has the factors 5 and 1.
+
+A composite number, on the other hand, has more than two factors. For example, 10 has the factors 1, 2, 5, and 10.
+
+The file primecheck.py uses the Sieve of Eratosthenes algorithm to generate a prime sieve. It then uses the prime sieve to determine whether a positive integer is prime or composite. The prime sieve is an array of character values: 'P', 'C', and 'N'.
+
+For example, let prime_sieve be the name of our prime sieve. Then prime_sieve[2] is set to 'P', and prime_sieve[10] is set to 'C'. Since 0 and 1 are neither prime nor composite, the values prime_sieve[0] and prime_sieve[1] are set to 'N'.
+
+You can see that, after our prime sieve is generated, the program can look up a number's primality in constant time.
+
+We see that... the Sieve of Eratosthenes algorithm has many uses. As shown thus far, it can be used to generate the first n primes, and it can also be used to check whether a number is prime. We will see, in the next section, that it can also be used to factor a number.
+
+The file primecheck.py can be run with the following command:
+
+    python primecheck.py <integer_argument>
+
+For fun, let's test some of the odd numbers in the 190s interval.
+
+    python primecheck.py 191
+    191 is prime
+
+    python primecheck.py 193
+    193 is prime
+
+    python primecheck.py 197
+    197 is prime
+
+    python primecheck.py 199
+    199 is prime
+
+    python primecheck.py 201
+    201 is composite
+
+You can see that the 190s interval is rich with primes. (So is the 10s interval.)
+
+    python primecheck.py 11
+    11 is prime
+
+    python primecheck.py 13
+    13 is prime
+
+    python primecheck.py 17
+    17 is prime
+
+    python primecheck.py 19
+    19 is prime
+
+    python primecheck.py 21
+    21 is composite
+
+If we take any interval of ten consecutive positive integers, there will be five odd numbers and five even numbers. One of the odd numbers will be divisible by 5. Thus, an interval like this can have four primes at most.
+
+I thought I would end this section with a cool theorem :)
+
+Also, I would like to mention that I created a symbolic link for primecheck in my ~/bin folder.
+
+    cd ~/bin
+    ln -s ~/Github/primes/primecheck.py primecheck
+    chmod +x ~/Github/primes/primecheck.py
+
+Now, let's move onto the next section
