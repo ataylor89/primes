@@ -43,7 +43,7 @@ def save(path = default_cache_path):
 
 def main():
     parser = argparse.ArgumentParser(prog='primetable.py', description='Create a prime table')
-    parser.add_argument('-n', '--numberofprimes', type=float, required=True)
+    parser.add_argument('n', type=float, help='The size of the table')
     group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument('-sn', '--shownth', action='store_true')
     group.add_argument('-sl', '--showlist', action='store_true')
@@ -51,7 +51,7 @@ def main():
     parser.add_argument('-o', '--outputfile', type=str)
     args = parser.parse_args()
     try:
-        n = int(args.numberofprimes)
+        n = int(args.n)
         assert n > 0
     except:
         print('Unable to parse the command-line argument as a positive integer')
