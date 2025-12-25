@@ -115,7 +115,7 @@ I created a symbolic link to primetable.py in my bin folder, just like before.
 This way, I can run the program "primetable" from any directory.
 
     cd ~
-    primetable -n 10 --showlist
+    primetable 10 --showlist
     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 
 ## primecheck.py
