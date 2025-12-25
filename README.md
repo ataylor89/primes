@@ -138,7 +138,7 @@ For example, let prime_sieve be the name of our prime sieve. Then prime_sieve[2]
 
 You can see that, after our prime sieve is generated, the program can look up a number's primality in constant time.
 
-We see that... the Sieve of Eratosthenes algorithm has many uses. As shown thus far, it can be used to generate the first n primes, and it can also be used to check whether a number is prime. We will see, in the next section, that it can also be used to factor a number.
+We see that... the Sieve of Eratosthenes algorithm has many uses. As shown thus far, it can be used to generate the first n primes, and it can also be used to check whether a number is prime. We will see, in a later section, that it can also be used to factor a number.
 
 The file primecheck.py can be run with the following command:
 
@@ -189,3 +189,18 @@ Also, I would like to mention that I created a symbolic link for primecheck in m
     chmod +x ~/Github/primes/primecheck.py
 
 Now, let's move onto the next section.
+
+## Interlude
+
+Number theory is a rich subject in mathematics. I thought I would ask some interesting number theory questions in an interlude.
+
+1. Is the number of primes finite or infinite?
+2. Is it possible to find a sequence of n consecutive positive integers that has zero primes, for any positive integer n? (For example, can you find a sequence of 100 consecutive positive integers that has zero primes, or must there be at least one prime in this sequence?)
+
+I learned the answer to question #1 a long time ago (in high school, or before high school).
+
+I actually looked up the answer to question #2 today.
+
+These are some really interesting questions in number theory. I thought that I would write them down.
+
+Both of these questions teach us about the importance of mathematical proof. Each question has an answer, a correct answer. Each question has an answer that can be verified by mathematical proof.
