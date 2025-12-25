@@ -20,7 +20,7 @@ def main():
     args = parser.parse_args()
     n = args.input
     if n < 2:
-        print('The input has to be a positive integer greater than 1')
+        print('%d is neither prime nor composite' %n)
         return
     arr = sieve(n + 1)
     if arr[n] == 'P':
