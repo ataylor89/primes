@@ -16,9 +16,9 @@ def sieve(size):
 
 def main():
     parser = argparse.ArgumentParser(prog='primecheck.py', description='Check if a number is prime')
-    parser.add_argument('input', type=int)
+    parser.add_argument('n', type=int, help='The number to test for primality')
     args = parser.parse_args()
-    n = args.input
+    n = args.n
     if n < 2:
         print('%d is neither prime nor composite' %n)
         return
