@@ -126,7 +126,7 @@ It accepts an integer as a positional argument. (The file primetable.py uses opt
 
 If the argument is less than 2, then the program indicates that it is neither prime nor composite.
 
-If the argument is greater than 2, then the program indicates whether it is prime or composite.
+If the argument is greater than or equal to 2, then the program indicates whether it is prime or composite.
 
 Here is a fun fact. A prime number has exactly two factors. For example, 2 has the factors 2 and 1. 5 has the factors 5 and 1.
 
