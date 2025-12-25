@@ -188,4 +188,4 @@ Also, I would like to mention that I created a symbolic link for primecheck in m
     ln -s ~/Github/primes/primecheck.py primecheck
     chmod +x ~/Github/primes/primecheck.py
 
-Now, let's move onto the next section
+Now, let's move onto the next section.
